@@ -80,7 +80,8 @@ class HTTPClient(asyncore.dispatcher):
             jsonObj = json.loads(decodeMsg)
             #Get the handler corresponding to the module
             metName = self.name2class[jsonObj["module"]]
-            getattr(HTTPClient,str(metName))(self,decodeMsg)
+            if jsonObj["log-stream"]  == "stderr":
+                getattr(HTTPClient,str(metName))(self,decodeMsg)
             #Log the intial log time and last log time for each module
             if jsonObj["module"] not in self.moduleMetas.keys():
                 self.moduleMetas[jsonObj["module"]] = {"logStartTime":jsonObj["timestamp"],"logEndTime":jsonObj["timestamp"]}
