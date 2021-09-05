@@ -41,10 +41,10 @@ zmq==0.0.0
 
 ### Important Design patterns Considered while Designing the Application are as below
 
-#### Singletone Pattern - In log_message_generator module for SockerInitiator
-#### factory pattern - In log_message_generator module for JsonBuilder
-#### Generator Pattern - In log_message_generator module for MsgGenerator
-#### Asynchronous Event Handling - In log_consumer HTTPClient 
+###### Singletone Pattern - In log_message_generator module for SockerInitiator
+###### factory pattern - In log_message_generator module for JsonBuilder
+###### Generator Pattern - In log_message_generator module for MsgGenerator
+###### Asynchronous Event Handling - In log_consumer HTTPClient 
 
 
 ## Use Cases
