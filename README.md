@@ -39,6 +39,13 @@ zmq==0.0.0
 8. New Module plugin - Architected Code for extensibility , need to add modules dynamically
 9. JSON should be adaptable to changes
 
+### Important Design patterns Considered while Designing the Application are as below
+
+#### Singletone Pattern - In log_message_generator module for SockerInitiator
+#### factory pattern - In log_message_generator module for JsonBuilder
+#### Generator Pattern - In log_message_generator module for MsgGenerator
+#### Asynchronous Event Handling - In log_consumer HTTPClient 
+
 
 ## Use Cases
  - Producer Generating Messages
@@ -53,4 +60,7 @@ zmq==0.0.0
 5. Open another Terminal/CMD Simulate the virtualEnv "log_generator_venv\Scripts\activate"
 6. Execute log_consumer.py
 7. There will be few module based files which will be generated having the Error Logs
+
+
+
 
