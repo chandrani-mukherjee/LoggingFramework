@@ -11,7 +11,9 @@ _logger = logging.getLogger('AsyncoreLog')
 _logger.setLevel(logging.DEBUG)
 
 class HTTPClient(asyncore.dispatcher):
-
+    '''
+	This class is an asynchronous consumer based on Zero MQ and Asyncore for handling the socket signals
+	'''
     def __init__(self, url):
         asyncore.dispatcher.__init__(self)
         self.name2class = {"SLAC":"handle_ModuleSLAC","OCPP":"handle_ModuleOCPP","EVSE":"handle_ModuleEVSE"}

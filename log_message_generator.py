@@ -4,10 +4,8 @@ import random
 import zmq
 from datetime import datetime
 from time import sleep
-# pip install Faker
 from faker import Faker
 from faker.providers import BaseProvider
-# pip install pyzmq
 
 
 random.seed = 0
